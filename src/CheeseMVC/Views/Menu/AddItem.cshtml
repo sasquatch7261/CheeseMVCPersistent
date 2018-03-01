@@ -4,10 +4,12 @@
     ViewBag.Title = "Add Item to Menu: " + Model.Menu.Name;
 }
 
+<h2>@ViewBag.Title</h2>
+
 <form asp-controller="Menu" asp-action="AddItem" method="post">
-    <label asp-for="cheeseID"></label>
-    <select asp-for="cheeseID"></select>
-    <span asp-validation-for="cheeseID" asp-items="@Model.Cheeses"></span>
+    <label asp-for="CheeseID"></label>
+    <select asp-for="CheeseID" asp-items="@Model.Cheeses"></select>
+    <span asp-validation-for="CheeseID"></span>
 
     <input type="hidden" name="MenuID" value="@Model.Menu.ID" />
 
